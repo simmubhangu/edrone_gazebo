@@ -1,0 +1,107 @@
+<?xml version="1.0" ?>
+
+<robot name="edrone_model" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Defining the colors used in this robot -->
+  <material name="Black">
+    <color rgba="0.0 0.0 0.0 1.0"/>
+  </material>
+  <material name="Red">
+    <color rgba="0.8 0.0 0.0 1.0"/>
+  </material>
+  <material name="Green">
+    <color rgba="0.0 0.8 0.0 1.0"/>
+  </material>
+  <material name="White">
+    <color rgba="1.0 1.0 1.0 1.0"/>
+  </material>
+  <material name="Blue">
+    <color rgba="0.0 0.0 0.8 1.0"/>
+  </material>
+  --&gt;
+
+  <!-- BASE-LINK -->
+  <!--Actual body/chassis of the robot-->
+  <link name="frame_link">
+    <inertia>
+      <mass>0.0085</mass>
+      <!-- Mesh Volume = 6484.868652
+          Mesh Surface = 8401.360352 -->
+      <!-- <inertia ixx="7860832.0" ixy="354.224915" ixz="9223.249023" iyy="15785238.0" iyz="514.304504" izz="8033247.0"/> -->
+      <inertia ixx="1212.180604086" ixy="0.054623298" ixz="1.422272295" iyy="2434.164644974" iyz="0.079308392" izz="1238.767881216"/>
+    </inertia>
+    <visual>
+       <origin rpy="1.57079632679 0 0" xyz="0 0 0.2"/>
+      <geometry>
+         <mesh filename="package://edrone_gazebo/urdf/stl/frame.stl" scale="0.001 0.001 0.001"/>
+         <!-- <mesh filename="package://edrone_gazebo/urdf/stl/frame.stl"/> -->
+      </geometry>
+      <material name="Black"/>
+    </visual>
+    <collision>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0.2"/>
+      <geometry>
+        <mesh filename="package://edrone_gazebo/urdf/stl/frame.stl" scale="0.001 0.001 0.001"/>\
+        <!-- <mesh filename="package://edrone_gazebo/urdf/stl/frame.stl" /> -->
+      </geometry>
+      <material name="Black"/>
+    </collision>
+  </link>
+
+  <gazebo reference="frame_link">
+    <material>Gazebo/Black</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+  <!-- End base link -->
+
+  <!-- Middle link --> 
+  <link name="holder_link">
+    <inertial>
+        <mass value="0.003"/>
+        <origin rpy="1.57079632679 0 0" xyz="0 0 0.2"/>
+        <!-- Mesh volume = 1220.164429
+            Mesh Surface = 3078.856689-->
+        <!--<inertia ixx="0.0000282916666667" ixy="0" ixz="0" iyy="0.0000282916666667" iyz="0" izz="0.00005625"/> --> <!-- previous values-->
+        <!-- <inertia ixx="286468.56250" ixy="655.034668" ixz="-35.668903" iyy="544867.3750" iyz="124.411606" izz="273834.56250"/> --> <!-- meshlab inertia tensor matrix-->
+        <inertia ixx="234.778654164" ixy="0.536841308" ixz="-0.029232866" iyy="446.552417076" iyz="0.101962984" izz="224.424311996"/> <!-- meshlab inertia divided by mesh volume -->
+    </inertial>
+    <visual>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0.2"/>
+      <geometry>
+         <mesh filename="package://edrone_gazebo/urdf/stl/holder.stl" scale="0.001 0.001 0.001"/>
+         <!-- <mesh filename="package://edrone_gazebo/urdf/stl/holder.stl"/> -->
+      </geometry>
+      <material name="Black"/>
+    </visual>
+    <collision>
+      <origin rpy="1.57079632679 0 0" xyz="0 0 0.2"/>
+      <geometry>
+         <mesh filename="package://edrone_gazebo/urdf/stl/holder.stl" scale="0.001 0.001 0.001"/>
+         <!-- <mesh filename="package://edrone_gazebo/urdf/stl/holder.stl"/> -->
+      </geometry>
+      <material name="Black"/>
+    </collision>
+  </link>
+
+  <gazebo reference="holder_link">
+    <material>Gazebo/Black</material>
+    <turnGravityOff>false</turnGravityOff>
+  </gazebo>
+
+  <joint name="middle_joint" type="fixed">
+    <parent link="frame_link"/>
+    <child link="holder_link"/>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+  </joint>
+
+  <gazebo reference="holder_link">
+    <turnGravityOff>false</turnGravityOff>
+    <material>Gazebo/Black</material>
+  </gazebo> 
+  <!-- End middle link -->
+
+  <!-- Propeller -->
+  <!-- multirotor_base_link -->
+  <link name="multiple_base">
+
+</robot>
