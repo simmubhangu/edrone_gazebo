@@ -56,7 +56,7 @@
   </gazebo>
   <!-- ===========================front left motor========================= -->
   <joint name="rotor_0_joint" type="continuous">
-    <origin rpy="0 0 0" xyz="0.0675 -0.0675 0.01"/>
+    <origin rpy="0 0 0" xyz="0.046 -0.046 0.0125"/>
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
@@ -116,7 +116,7 @@
 
   <!-- ========================Front Right motor============================================ -->
   <joint name="rotor_1_joint" type="continuous">
-    <origin rpy="0 0 0" xyz="-0.0675 -0.0675 0.01"/>
+    <origin rpy="0 0 0" xyz="-0.046 -0.046 0.0125"/>
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
@@ -176,7 +176,7 @@
 
   <!-- =====================================back right motor================================== -->
   <joint name="rotor_2_joint" type="continuous">
-    <origin rpy="0 0 0" xyz="-0.0675 0.0675 0.01"/>
+    <origin rpy="0 0 0" xyz="-0.046 0.046 0.0125"/>
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
@@ -236,7 +236,7 @@
 
   <!-- ========================back left motor============================= -->
   <joint name="rotor_3_joint" type="continuous">
-    <origin rpy="0 0 0" xyz="0.0675 0.0675 0.01"/>
+    <origin rpy="0 0 0" xyz="0.046 0.046 0.0125"/>
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
