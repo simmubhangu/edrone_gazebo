@@ -4,10 +4,10 @@
   <!-- Properties -->
   <xacro:property name="namespace" value="edrone_gazebo" />
   <xacro:property name="rotor_velocity_slowdown_sim" value="10" />
-  <xacro:property name="mesh_file" value="frame.stl" />
+  <xacro:property name="mesh_file" value="frame.dae" />
   <xacro:property name="mesh_scale" value="0.001 0.001 0.001"/>
   <xacro:property name="mesh" value="prop"/>  <!-- "propeller" -->
-  <xacro:property name="mesh_scale_prop" value="0.12 0.12 0.12"/>
+  <xacro:property name="mesh_scale_prop" value="0.001 0.001 0.001"/>
   <xacro:property name="mass" value="0.0085" /> <!-- [kg] -->
   <xacro:property name="body_width" value="0.14" /> <!-- [m] -->
   <xacro:property name="body_height" value="0.015" /> <!-- [m] -->
@@ -118,7 +118,7 @@
     rolling_moment_coefficient="${rolling_moment_coefficient}"
     mesh="prop"
     mesh_scale="${mesh_scale_prop}"
-    color="Grey">
+    color="black">
     <origin xyz="-${arm_length} 0 ${rotor_offset_top}" rpy="0 0 0" />
     <xacro:insert_block name="rotor_inertia" />
   </xacro:vertical_rotor>

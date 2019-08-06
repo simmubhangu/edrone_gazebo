@@ -94,7 +94,7 @@
         <geometry>
           <!-- <cylinder length="0.005" radius="${radius_rotor}"/> --> <!-- [m] -->
           <!-- <mesh filename="package://rotors_description/meshes/propeller_${direction}.dae" -->
-          <mesh filename="package://urdf/meshes/${mesh}_${direction}.stl"
+          <mesh filename="package://urdf/meshes/${mesh}_${direction}.dae"
             scale="${mesh_scale}" />
           <!-- <box size="${2*radius_rotor} 0.01 0.005"/> -->
         </geometry>
