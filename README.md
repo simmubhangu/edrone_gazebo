@@ -1,2 +1,2 @@
-# edrone_gazebo
+# edrone_gazebo - developing
 gazebo model of eyantra drone
