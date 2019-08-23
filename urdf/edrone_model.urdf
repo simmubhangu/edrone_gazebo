@@ -60,7 +60,7 @@
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
-    <parent link="base_link"/>
+    <parent link="base_link_inertia"/>
     <child link="rotor_0"/>
   </joint>
   <!-- TODO(ff): not currently set because it's not yet supported -->
@@ -120,7 +120,7 @@
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
-    <parent link="base_link"/>
+    <parent link="base_link_inertia"/>
     <child link="rotor_1"/>
   </joint>
   <!-- TODO(ff): not currently set because it's not yet supported -->
@@ -180,7 +180,7 @@
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
-    <parent link="base_link"/>
+    <parent link="base_link_inertia"/>
     <child link="rotor_2"/>
   </joint>
   <!-- TODO(ff): not currently set because it's not yet supported -->
@@ -240,7 +240,7 @@
     <axis xyz="0 0 1"/>
     <!-- TODO(ff): not currently set because it's not yet supported -->
     <!-- <limit effort="2000" velocity="${max_rot_velocity}" /> -->
-    <parent link="base_link"/>
+    <parent link="base_link_inertia"/>
     <child link="rotor_3"/>
   </joint>
   <!-- TODO(ff): not currently set because it's not yet supported -->
